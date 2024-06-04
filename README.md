@@ -1,6 +1,6 @@
 # first_project
 
-A new Flutter project.
+A new Flutter project. Just a simple example app 1
 
 ## Getting Started
 
