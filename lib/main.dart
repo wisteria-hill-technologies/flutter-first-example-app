@@ -1,5 +1,5 @@
 import 'package:first_project/home_page.dart';
-import 'package:first_project/profile_page.dart';
+import 'package:first_project/list_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -28,9 +28,9 @@ class RootPage extends StatefulWidget {
 
 class _RootPageState extends State<RootPage> {
   int currentPage = 0;
-  List<Widget> pages = const [
-    HomePage(),
-    ProfilePage(),
+  List<Widget> pages = [
+    const HomePage(),
+    ListPage(),
   ];
   @override
   Widget build(BuildContext context) {
@@ -50,7 +50,7 @@ class _RootPageState extends State<RootPage> {
       bottomNavigationBar: NavigationBar(
         destinations: const [
           NavigationDestination(icon: Icon(Icons.home), label: 'Home'),
-          NavigationDestination(icon: Icon(Icons.person), label: 'Profile')
+          NavigationDestination(icon: Icon(Icons.person), label: 'List')
         ],
         onDestinationSelected: (int index) {
           setState(() {

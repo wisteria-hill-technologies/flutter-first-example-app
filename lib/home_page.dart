@@ -1,3 +1,4 @@
+import 'package:first_project/details_page.dart';
 import 'package:first_project/learn_flutter_page.dart';
 import 'package:flutter/material.dart';
 
@@ -8,14 +9,12 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
         child: ElevatedButton(
-          onPressed: (){
-            Navigator.of(context).push(MaterialPageRoute(builder: (context){
-              return const LearnFlutterPage();
-            })
-            );
-          },
-          child: const Text('Learn Flutter'),
-        )
-    );
+      onPressed: () {
+        Navigator.of(context).push(MaterialPageRoute(builder: (context) {
+          return const LearnFlutterPage();
+        }));
+      },
+      child: const Text('Learn Flutter'),
+    ));
   }
 }
